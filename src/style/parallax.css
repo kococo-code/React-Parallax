@@ -1,0 +1,28 @@
+#Parallax{
+    position : relative;
+    top : calc(40%-180px);
+    width : 100%;
+    line-height : 90px;
+}
+#Parallax li{
+    list-style : none;
+    font-size : 3rem;
+    font-weight : 600;
+    font-style : italic;
+}
+#Parallax2{
+    position : absolute;
+    top : 1000px;
+    width : 100%;
+    line-height : 90px;
+    background : #222;
+    transform-style : preserve-3d;
+}
+#Parallax2 li{
+    list-style : none;
+    font-size : 5rem;
+    font-weight : 600;
+    font-style : italic;
+    color : white;
+    margin : 100px;
+}
