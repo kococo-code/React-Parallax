@@ -1,15 +1,13 @@
 import React ,{useState,useEffect} from 'react';
 import ObserverDom from './util/CaptureScroll';
-export default function Parallax(){
+export default function  (){
     
     const [offset,setOffset] = useState(0)
     const [onBoard, setOnBoard] = useState(0);
-    
+
     
     useEffect(()=>{
-        if(onBoard===1){
-            console.log()
-        }
+
         function handleScroll(){
             setOffset(window.pageYOffset);
         }
@@ -21,13 +19,16 @@ export default function Parallax(){
                    
     },[]);
     return(
-        <section id="Parallax" {...ObserverDom(0.1,setOnBoard)}>
+        <div id="Text_Parallax" {...ObserverDom(0.01,setOnBoard)}>
+        
+        <section id="Parallax">
             {offset}
-            <li className="keywords" style={{transform : `translate3D(${offset*0.1}px,0,0)`}}>JinTaekLim</li>
-            <li className="keywords" style={{transform : `translate3D(${offset*-0.1}px,0,0)`}}>Kococo</li>
-            <li className="keywords" style={{transform : `translate3D(${offset*0.1}px,0,0)`}}>SoftWare Engineer</li>
-            <li className="keywords" style={{transform : `translate3D(${offset*-0.1}px,0,0)`}}>Real</li>
-            <li className="keywords" style={{transform : `translate3D(${offset*0.1}px,0,0)`}}>JinTaekLim</li>
+            <li className="keywords" style={onBoard ? {transform : `translate3D(${offset*-0.5}px,0,0)`} : {transform : `translate3D(0,0,0)`}}>JinTaekLim</li>
+            <li className="keywords" style={onBoard ? {transform : `translate3D(${offset*0.5}px,0,0)`} : {transform : `translate3D(0,0,0)`}}>Kococo</li>
+            <li className="keywords" style={onBoard ? {transform : `translate3D(${offset*-0.5}px,0,0)`} : {transform : `translate3D(0,0,0)`}}>Buen dia!</li>
+            <li className="keywords" style={onBoard ? {transform : `translate3D(${offset*0.5}px,0,0)`} : {transform : `translate3D(0,0,0)`}}>Real</li>
+            <li className="keywords" style={onBoard ? {transform : `translate3D(${offset*-0.5}px,0,0)`} : {transform : `translate3D(0,0,0)`}}>Hello</li>
         </section>
+        </div>
     )
 }

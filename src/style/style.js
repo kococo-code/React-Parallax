@@ -1,3 +1,5 @@
 // Project
-import './parallax.css';
 import './main.css';
+
+import './ball.css';
+import './parallax.css';

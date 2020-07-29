@@ -1,0 +1,25 @@
+#BallTracker{
+    position : relative;
+    overflow: hidden;
+    top : 100px;
+    width : 100%;
+    height: 1200px;
+    background-color: #ffd1dc;
+    filter : url('#gooey');
+
+}
+.Ball{
+    text-align: center;
+    padding : 0 auto;
+    height: 100px;
+    width : 100px;
+    border-radius : 50%;
+    background: linear-gradient(0deg , #ff2b3b , #da00ff);
+    color : white;
+    opacity :100;
+}
+svg{
+
+    width :0;
+    height :0;
+}

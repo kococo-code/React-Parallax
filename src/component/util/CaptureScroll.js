@@ -1,4 +1,4 @@
-import React ,{useRef,useEffect,useCallback} from 'react';
+import {useRef,useEffect} from 'react';
 
 const ObserveDom = (threshold=0.1,setOnBoard) =>{
     const dom = useRef();
@@ -6,7 +6,7 @@ const ObserveDom = (threshold=0.1,setOnBoard) =>{
         entries.forEach((entry)=>{
             if (entry.isIntersecting){
                 setOnBoard(1);
-                console.log('Word')
+                console.log('Show')
             }
             else{
                 setOnBoard(0);

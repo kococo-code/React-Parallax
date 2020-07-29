@@ -1,11 +1,10 @@
 import React from 'react';
 import Parallax from './component/parallax';
-import Parallax2 from './component/parallax2';
-
+import BallTrack from './component/MouseTracker';
 const App = () => (
   <div>
     <Parallax></Parallax>
-    <Parallax2></Parallax2>
+    <BallTrack></BallTrack>
   </div>
 );
 export default App;
